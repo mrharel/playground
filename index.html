@@ -18,8 +18,18 @@
 </head>
 <body>
     <h1>Hi :)</h1>
-    <form>
+    <div>
         <input type="text" placeholder="test" />
-    </form>
+        <button id="click">Click Me</button>
+        <h3>Click Count = <span id="count">0</span></h3>
+    </div>
+    <script>
+        var clickCount = 0;
+        var span = document.querySelector("#count");
+        document.querySelector("#click").addEventListener("click", () => {
+            clickCount++;
+            span.innerHTML = clickCount;
+        });
+    </script>
 </body>
 </html>
